@@ -8,6 +8,9 @@ hardware.pulseaudio.enable = true;
 nixpkgs.config = {
   allowUnfree = true;
   firefox.drmSupport = true;
+  packageOverrides = pkgs: {
+    tor-browser-bundle-bin = pkgs.tor-browser-bundle-bin.override { pulseaudioSupport = true; };
+  };
 };
 
 programs.adb.enable = true;
@@ -25,6 +28,7 @@ virtualisation = {
 environment.systemPackages = with pkgs; [
 
   unstable.keepassx-community
+  unstable.tor-browser-bundle-bin
   unstable.youtube-dl
 
   abcde
@@ -46,6 +50,7 @@ environment.systemPackages = with pkgs; [
   gwenview
   htop
   inkscape
+  jpegoptim
   kate
   kcalc
   libreoffice
@@ -68,7 +73,6 @@ environment.systemPackages = with pkgs; [
   terminator
   thunderbird
   tmux
-  tor-browser-bundle-bin
   unetbootin
   unzip
   vim
