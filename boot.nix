@@ -15,6 +15,6 @@ boot = {
 
   cleanTmpDir = true;
 
-  kernelPackages = pkgs.linuxPackages_4_15;
+  kernelPackages = pkgs.linuxPackages_4_16;
 };
 }
