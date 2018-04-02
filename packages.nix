@@ -32,12 +32,14 @@ environment.systemPackages = with pkgs; [
   unstable.youtube-dl
 
   abcde
+  anydesk
   atom
   ark
   asciidoctor
   audacity
   bind
   byobu
+  cdparanoia
   chromium
   curl
   file
@@ -50,9 +52,11 @@ environment.systemPackages = with pkgs; [
   gwenview
   htop
   inkscape
+  iperf
   jpegoptim
   kate
   kcalc
+  kdeconnect
   libreoffice
   lm_sensors
   lsof
