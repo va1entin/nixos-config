@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 let
   unstable = import <nixos-unstable> {config = config.nixpkgs.config;};
+  old = import <old> {config = config.nixpkgs.config;};
 in {
 
 hardware.pulseaudio.enable = true;
@@ -27,9 +28,7 @@ virtualisation = {
 # $ nix-env -qaP | grep wget
 environment.systemPackages = with pkgs; [
 
-  unstable.keepassx-community
-  unstable.tor-browser-bundle-bin
-  unstable.youtube-dl
+  old.terminator
 
   abcde
   anydesk
@@ -57,6 +56,7 @@ environment.systemPackages = with pkgs; [
   kate
   kcalc
   kdeconnect
+  keepassx-community
   libreoffice
   lm_sensors
   lsof
@@ -74,9 +74,9 @@ environment.systemPackages = with pkgs; [
   rsync
   screen
   spectacle
-  terminator
   thunderbird
   tmux
+  tor-browser-bundle-bin
   unetbootin
   unzip
   vim
@@ -84,6 +84,7 @@ environment.systemPackages = with pkgs; [
   weechat
   wget
   which
+  youtube-dl
   zim
   zip
   zsh
