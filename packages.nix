@@ -6,11 +6,14 @@ in {
 
 hardware.pulseaudio.enable = true;
 
+hardware.opengl.driSupport32Bit = true;
+
 nixpkgs.config = {
   allowUnfree = true;
   firefox.drmSupport = true;
   packageOverrides = pkgs: {
     tor-browser-bundle-bin = pkgs.tor-browser-bundle-bin.override { pulseaudioSupport = true; };
+  pulseaudio = true;
   };
 };
 
@@ -18,6 +21,7 @@ programs.adb.enable = true;
 
 services.openssh.enable = true;
 #services.printing.enable = true;
+
 
 virtualisation = {
   virtualbox.host.enable = true;
@@ -32,15 +36,17 @@ environment.systemPackages = with pkgs; [
 
   abcde
   anydesk
+  asciidoctor
   atom
   ark
-  asciidoctor
   audacity
   bind
   byobu
   cdparanoia
   chromium
   curl
+  dolphinEmu
+  ffmpeg
   file
   firefox
   gcc
@@ -56,29 +62,42 @@ environment.systemPackages = with pkgs; [
   kate
   kcalc
   kdeconnect
+  kdenlive
   keepassx-community
-  libreoffice
+  libreoffice-fresh
   lm_sensors
   lsof
   man
   mpv
+  mtr
+  networkmanager
+  networkmanager-openvpn
+  networkmanager-vpnc
+  ncdu
   nmap
   ntfs3g
   oh-my-zsh
   okular
+#  openvpn
   p7zip
   pavucontrol
+  unstable.pcsx2
+  pcsxr
+  pdftk
+  plasma-nm
   python
   python3
   rclone
   rsync
   screen
   spectacle
+  steam
   thunderbird
   tmux
   tor-browser-bundle-bin
   unetbootin
   unzip
+  usbutils
   vim
   vlc
   weechat
