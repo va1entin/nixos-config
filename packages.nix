@@ -34,10 +34,10 @@ environment.systemPackages = with pkgs; [
 
   old.terminator
 
+  atom
   abcde
   anydesk
   asciidoctor
-  atom
   ark
   audacity
   bind
@@ -49,6 +49,7 @@ environment.systemPackages = with pkgs; [
   ffmpeg
   file
   firefox
+  fzf
   gcc
   gimp
   git
@@ -78,10 +79,9 @@ environment.systemPackages = with pkgs; [
   ntfs3g
   oh-my-zsh
   okular
-#  openvpn
   p7zip
+  pandoc
   pavucontrol
-  unstable.pcsx2
   pcsxr
   pdftk
   plasma-nm
@@ -95,7 +95,9 @@ environment.systemPackages = with pkgs; [
   thunderbird
   tmux
   tor-browser-bundle-bin
+  tree
   unetbootin
+  unrar
   unzip
   usbutils
   vim
