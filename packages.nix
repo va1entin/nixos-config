@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 let
   unstable = import <nixos-unstable> {config = config.nixpkgs.config;};
-  old = import <old> {config = config.nixpkgs.config;};
 in {
 
 hardware.pulseaudio.enable = true;
@@ -11,10 +10,11 @@ hardware.opengl.driSupport32Bit = true;
 nixpkgs.config = {
   allowUnfree = true;
   firefox.drmSupport = true;
-  packageOverrides = pkgs: {
-    tor-browser-bundle-bin = pkgs.tor-browser-bundle-bin.override { pulseaudioSupport = true; };
-  pulseaudio = true;
-  };
+#Broken in 18.09+
+#  packageOverrides = pkgs: {
+#   tor-browser-bundle-bin = pkgs.tor-browser-bundle-bin.override { pulseaudioSupport = true; };
+#  pulseaudio = true;
+# };
 };
 
 programs.adb.enable = true;
@@ -32,8 +32,6 @@ virtualisation = {
 # $ nix-env -qaP | grep wget
 environment.systemPackages = with pkgs; [
 
-  old.terminator
-
   atom
   abcde
   anydesk
@@ -44,6 +42,7 @@ environment.systemPackages = with pkgs; [
   byobu
   cdparanoia
   chromium
+  cpulimit
   curl
   dolphinEmu
   ffmpeg
@@ -56,10 +55,12 @@ environment.systemPackages = with pkgs; [
   gnupg
   gparted
   gwenview
+  hexchat
   htop
   inkscape
   iperf
   jpegoptim
+  jq
   kate
   kcalc
   kdeconnect
@@ -84,9 +85,13 @@ environment.systemPackages = with pkgs; [
   pavucontrol
   pcsxr
   pdftk
-  plasma-nm
+#  plasma-nm
   python
   python3
+  python3Packages.pep8
+
+  ncurses
+
   rclone
   rsync
   screen
@@ -94,7 +99,7 @@ environment.systemPackages = with pkgs; [
   steam
   thunderbird
   tmux
-  tor-browser-bundle-bin
+  tor-browser-bundle
   tree
   unetbootin
   unrar
@@ -102,7 +107,6 @@ environment.systemPackages = with pkgs; [
   usbutils
   vim
   vlc
-  weechat
   wget
   which
   youtube-dl

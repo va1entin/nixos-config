@@ -1,7 +1,10 @@
 { pkgs, ... }:
 {
-users.extraUsers = {
 
+# required for login in a vm created by "nixos-rebuild build-vm"
+#users.users.val.initialPassword = "test";
+
+users.extraUsers = {
 val = {
     isNormalUser = true;
     home = "/home/val";
