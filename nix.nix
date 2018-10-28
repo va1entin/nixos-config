@@ -1,3 +1,10 @@
 {
-nix.useSandbox = true;
+
+nix = {
+
+useSandbox = true;
+autoOptimiseStore = true;
+
+};
+
 }
