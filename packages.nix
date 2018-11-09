@@ -24,7 +24,11 @@ services.openssh.enable = true;
 
 
 virtualisation = {
-  virtualbox.host.enable = true;
+  virtualbox.host = {
+    enable = true;
+# currently requires virtualbox to built
+#    enableExtensionPack = true;
+  };
   docker.enable = true;
 };
 

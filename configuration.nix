@@ -9,6 +9,7 @@
       /home/val/git/nixos-config/boot.nix
       /home/val/git/nixos-config/cron.nix
       /home/val/git/nixos-config/display-manager.nix
+      /home/val/git/nixos-config/fs.nix
       /home/val/git/nixos-config/i18n.nix
       /home/val/git/nixos-config/networking.nix
       /home/val/git/nixos-config/nix.nix
@@ -18,5 +19,4 @@
       /home/val/git/nixos-config/xserver.nix
       /home/val/git/nixos-config/zsh.nix
     ];
-
 }
