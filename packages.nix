@@ -33,10 +33,12 @@ virtualisation = {
 };
 
 environment.systemPackages = with pkgs; [
-
+gradle
   atom
   abcde
+  android-studio
   anydesk
+  appimage-run
   asciidoctor
   ark
   audacity
@@ -49,6 +51,7 @@ environment.systemPackages = with pkgs; [
   dolphinEmu
   ffmpeg
   file
+  filelight
   firefox
   fzf
   gcc
@@ -65,8 +68,8 @@ environment.systemPackages = with pkgs; [
   jq
   kate
   kcalc
-  kdeconnect
-  kdenlive
+  unstable.kdeconnect
+  #kdenlive
   keepassx-community
   libreoffice-fresh
   lm_sensors
@@ -91,14 +94,14 @@ environment.systemPackages = with pkgs; [
   python
   python3
   python3Packages.pep8
-
   ncurses
-
   rclone
   rsync
   screen
   spectacle
   steam
+  teamspeak_client
+  teamviewer
   thunderbird
   tmux
   tor-browser-bundle
@@ -111,7 +114,7 @@ environment.systemPackages = with pkgs; [
   vlc
   wget
   which
-  youtube-dl
+  unstable.youtube-dl
   zim
   zip
   zsh
