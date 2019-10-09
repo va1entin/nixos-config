@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 let
-  unstable = import <nixos-unstable> {config = config.nixpkgs.config;};
+  unstable = import <nixpkgs-unstable> {config = config.nixpkgs.config;};
 in {
 
 hardware.pulseaudio.enable = true;
@@ -33,22 +33,24 @@ virtualisation = {
 };
 
 environment.systemPackages = with pkgs; [
-gradle
+#gradle
   atom
   abcde
-  android-studio
+ # android-studio
+  ansible
   anydesk
   appimage-run
   asciidoctor
   ark
   audacity
+  autokey
   bind
   byobu
   cdparanoia
   chromium
   cpulimit
   curl
-  dolphinEmu
+ # dolphinEmu
   ffmpeg
   file
   filelight
@@ -68,7 +70,7 @@ gradle
   jq
   kate
   kcalc
-  unstable.kdeconnect
+  kdeconnect
   #kdenlive
   keepassx-community
   libreoffice-fresh
@@ -80,31 +82,32 @@ gradle
   networkmanager
   networkmanager-openvpn
   networkmanager-vpnc
+  nextcloud-client
   ncdu
   nmap
   ntfs3g
   oh-my-zsh
   okular
+  openssl
   p7zip
   pandoc
   pavucontrol
-  pcsxr
+  #pcsxr
   pdftk
 #  plasma-nm
-  python
-  python3
-  python3Packages.pep8
+  (python3.withPackages(ps: with ps; [ pandas ipython notebook numpy toolz pytestcov pytest pynacl ]))
+  jupyter
   ncurses
   rclone
   rsync
   screen
   spectacle
-  steam
+  #steam
   teamspeak_client
   teamviewer
   thunderbird
   tmux
-  tor-browser-bundle
+#  tor-browser-bundle-bin
   tree
   unetbootin
   unrar
@@ -119,4 +122,5 @@ gradle
   zip
   zsh
  ];
+
 }

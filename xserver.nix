@@ -5,5 +5,6 @@ services.xserver = {
   layout = "de";
   videoDrivers = [ "nvidia" ];
   desktopManager.plasma5.enable = true;
+ # desktopManager.xfce.enable = true;
 };
 }
