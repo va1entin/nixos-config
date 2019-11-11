@@ -19,6 +19,9 @@ nixpkgs.config = {
 
 programs.adb.enable = true;
 
+#Required for pulseeffects
+programs.dconf.enable = true;
+
 services.openssh.enable = true;
 #services.printing.enable = true;
 
@@ -38,7 +41,7 @@ environment.systemPackages = with pkgs; [
   abcde
  # android-studio
   ansible
-  anydesk
+#  anydesk
   appimage-run
   asciidoctor
   ark
@@ -73,6 +76,7 @@ environment.systemPackages = with pkgs; [
   kdeconnect
   #kdenlive
   keepassx-community
+#  latte-dock
   libreoffice-fresh
   lm_sensors
   lsof
@@ -95,7 +99,8 @@ environment.systemPackages = with pkgs; [
   #pcsxr
   pdftk
 #  plasma-nm
-  (python3.withPackages(ps: with ps; [ pandas ipython notebook numpy toolz pytestcov pytest pynacl ]))
+  (python3.withPackages(ps: with ps; [ folium opencv4 pandas ipython notebook numpy toolz pytestcov pytest pynacl ]))
+  pulseeffects
   jupyter
   ncurses
   rclone
@@ -103,17 +108,18 @@ environment.systemPackages = with pkgs; [
   screen
   spectacle
   #steam
-  teamspeak_client
+  unstable.teamspeak_client
   teamviewer
   thunderbird
   tmux
-#  tor-browser-bundle-bin
+  unstable.tor-browser-bundle-bin
   tree
   unetbootin
   unrar
   unzip
   usbutils
   vim
+  visidata
   vlc
   wget
   which
