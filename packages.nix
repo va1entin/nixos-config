@@ -10,11 +10,9 @@ hardware.opengl.driSupport32Bit = true;
 nixpkgs.config = {
   allowUnfree = true;
   firefox.drmSupport = true;
-#Broken in 18.09+
-#  packageOverrides = pkgs: {
-#   tor-browser-bundle-bin = pkgs.tor-browser-bundle-bin.override { pulseaudioSupport = true; };
-#  pulseaudio = true;
-# };
+  packageOverrides = pkgs: rec {
+   tor-browser-bundle-bin = pkgs.tor-browser-bundle-bin.override { pulseaudioSupport = true; };
+ };
 };
 
 programs.adb.enable = true;
