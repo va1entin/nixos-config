@@ -110,6 +110,7 @@ environment.systemPackages = with pkgs; [
   teamviewer
   thunderbird
   tmux
+  traceroute
   unstable.tor-browser-bundle-bin
   tree
   unetbootin
