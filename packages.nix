@@ -44,7 +44,7 @@ environment.systemPackages = with pkgs; [
   asciidoctor
   ark
   audacity
-  autokey
+  unstable.autokey
   bind
   byobu
   cdparanoia
@@ -52,10 +52,12 @@ environment.systemPackages = with pkgs; [
   cpulimit
   curl
  # dolphinEmu
+#  eyeD3
   ffmpeg
   file
   filelight
   firefox
+  firefox-devedition-bin
   fzf
   gcc
   gimp
@@ -84,7 +86,7 @@ environment.systemPackages = with pkgs; [
   networkmanager
   networkmanager-openvpn
   networkmanager-vpnc
-  nextcloud-client
+  unstable.nextcloud-client
   ncdu
   nmap
   ntfs3g
@@ -97,7 +99,22 @@ environment.systemPackages = with pkgs; [
   #pcsxr
   pdftk
 #  plasma-nm
-  (python3.withPackages(ps: with ps; [ folium opencv4 pandas ipython notebook numpy toolz pytestcov pytest pynacl ]))
+  (python3.withPackages(ps: with ps; [
+folium
+h5py
+Keras
+ipython
+matplotlib
+notebook
+numpy
+opencv4
+pandas
+pynacl
+pytest
+pytestcov
+scikitlearn
+toolz
+]))
   pulseeffects
   jupyter
   ncurses
