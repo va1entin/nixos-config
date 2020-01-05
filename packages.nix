@@ -101,6 +101,7 @@ environment.systemPackages = with pkgs; [
 #  plasma-nm
   (python3.withPackages(ps: with ps; [
 folium
+python-gnupg
 h5py
 Keras
 ipython
@@ -121,6 +122,7 @@ toolz
   rclone
   rsync
   screen
+  signal-desktop
   spectacle
   #steam
   unstable.teamspeak_client
