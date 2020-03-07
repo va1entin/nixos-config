@@ -12,6 +12,8 @@ nixpkgs.config = {
   firefox.drmSupport = true;
   packageOverrides = pkgs: rec {
    tor-browser-bundle-bin = pkgs.tor-browser-bundle-bin.override { pulseaudioSupport = true; };
+   # Otherwise jekyll-paginate and more are missing
+   jekyll = pkgs.jekyll.override { withOptionalDependencies = true; };
  };
 };
 
@@ -35,6 +37,9 @@ virtualisation = {
 
 environment.systemPackages = with pkgs; [
 #gradle
+  pciutils
+  gnumake
+
   atom
   abcde
  # android-studio
@@ -44,12 +49,13 @@ environment.systemPackages = with pkgs; [
   asciidoctor
   ark
   audacity
-  unstable.autokey
+  autokey
   bind
   byobu
   cdparanoia
   chromium
   cpulimit
+  cudatoolkit
   curl
  # dolphinEmu
 #  eyeD3
@@ -69,14 +75,14 @@ environment.systemPackages = with pkgs; [
   htop
   inkscape
   iperf
+  jekyll
   jpegoptim
   jq
   kate
   kcalc
-  kdeconnect
+#  kdeconnect
   #kdenlive
   keepassx-community
-#  latte-dock
   libreoffice-fresh
   lm_sensors
   lsof
@@ -100,22 +106,30 @@ environment.systemPackages = with pkgs; [
   pdftk
 #  plasma-nm
   (python3.withPackages(ps: with ps; [
-folium
-python-gnupg
-h5py
-Keras
-ipython
-matplotlib
-notebook
-numpy
-opencv4
-pandas
-pynacl
-pytest
-pytestcov
-scikitlearn
-toolz
-]))
+    aiohttp
+    async-timeout
+    folium
+    python-gnupg
+    h5py
+    Keras
+    ipython
+    matplotlib
+    mutagen
+    notebook
+    numpy
+    opencv4
+    pandas
+    pydot
+    pynacl
+    pytest
+    pytestcov
+    scikitlearn
+    tensorflow
+#    tensorflow-gpu
+    theano
+    toolz
+    websockets
+  ]))
   pulseeffects
   jupyter
   ncurses
@@ -126,7 +140,7 @@ toolz
   spectacle
   #steam
   unstable.teamspeak_client
-  teamviewer
+  unstable.teamviewer
   thunderbird
   tmux
   traceroute
