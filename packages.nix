@@ -11,7 +11,7 @@ nixpkgs.config = {
   allowUnfree = true;
   firefox.drmSupport = true;
   packageOverrides = pkgs: rec {
-   tor-browser-bundle-bin = pkgs.tor-browser-bundle-bin.override { pulseaudioSupport = true; };
+   tor-browser-bundle-bin = pkgs.tor-browser-bundle-bin.override { mediaSupport = true; };
    # Otherwise jekyll-paginate and more are missing
    jekyll = pkgs.jekyll.override { withOptionalDependencies = true; };
  };
@@ -36,18 +36,18 @@ virtualisation = {
 };
 
 environment.systemPackages = with pkgs; [
-#gradle
-  pciutils
-  gnumake
 
+# Unstable
+unstable.youtube-dl
+
+# Base
   atom
   abcde
- # android-studio
+#  android-studio
   ansible
 #  anydesk
   appimage-run
   asciidoctor
-  ark
   audacity
   autokey
   bind
@@ -55,10 +55,7 @@ environment.systemPackages = with pkgs; [
   cdparanoia
   chromium
   cpulimit
-  cudatoolkit
   curl
- # dolphinEmu
-#  eyeD3
   ffmpeg
   file
   filelight
@@ -68,9 +65,11 @@ environment.systemPackages = with pkgs; [
   gcc
   gimp
   git
+  gnumake
   gnupg
+  google-cloud-sdk
   gparted
-  gwenview
+  heroku
   hexchat
   htop
   inkscape
@@ -78,16 +77,13 @@ environment.systemPackages = with pkgs; [
   jekyll
   jpegoptim
   jq
-  kate
-  kcalc
-#  kdeconnect
-  #kdenlive
   keepassx-community
+  konsole
   libreoffice-fresh
   lm_sensors
   lsof
   man
-  mpv
+#  mpv
   mtr
   networkmanager
   networkmanager-openvpn
@@ -97,17 +93,45 @@ environment.systemPackages = with pkgs; [
   nmap
   ntfs3g
   oh-my-zsh
-  okular
   openssl
   p7zip
   pandoc
   pavucontrol
-  #pcsxr
+  pciutils
   pdftk
-#  plasma-nm
+  pulseeffects
+  jupyter
+  ncurses
+  rclone
+  rsync
+  screen
+  signal-desktop
+  teamspeak_client
+  teamviewer
+  thunderbird
+  tmux
+  traceroute
+  tor-browser-bundle-bin
+  tree
+  unetbootin
+  unrar
+  unzip
+  usbutils
+  vim
+  visidata
+  vlc
+  wget
+  which
+  zim
+  zip
+  zsh
+
+# Python
+  pipenv
   (python3.withPackages(ps: with ps; [
     aiohttp
     async-timeout
+    flask
     folium
     python-gnupg
     h5py
@@ -125,40 +149,34 @@ environment.systemPackages = with pkgs; [
     pytestcov
     scikitlearn
     tensorflow
-#    tensorflow-gpu
     theano
     toolz
     websockets
   ]))
-  pulseeffects
-  jupyter
-  ncurses
-  rclone
-  rsync
-  screen
-  signal-desktop
-  spectacle
-  #steam
-  unstable.teamspeak_client
-  unstable.teamviewer
-  thunderbird
-  tmux
-  traceroute
-  unstable.tor-browser-bundle-bin
-  tree
-  unetbootin
-  unrar
-  unzip
-  usbutils
-  vim
-  visidata
-  vlc
-  wget
-  which
-  unstable.youtube-dl
-  zim
-  zip
-  zsh
+
+# Gnome
+  gnome3.gnome-tweaks
+
+# Cuda
+#  tensorflow-gpu
+#  cudatoolkit
+
+# KDE
+#  ark
+#  spectacle
+#  plasma-nm
+#  okular
+#  kate
+#  kcalc
+#  kdeconnect
+#  kdenlive
+#  gwenview
+
+# Gaming
+#  pcsxr
+#  steam
+#  dolphinEmu
+
  ];
 
 }
