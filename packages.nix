@@ -88,7 +88,7 @@ unstable.youtube-dl
   networkmanager
   networkmanager-openvpn
   networkmanager-vpnc
-  unstable.nextcloud-client
+  nextcloud-client
   ncdu
   nmap
   ntfs3g
