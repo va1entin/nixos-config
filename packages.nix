@@ -5,7 +5,7 @@ in {
 
 hardware.pulseaudio.enable = true;
 
-hardware.opengl.driSupport32Bit = true;
+# hardware.opengl.driSupport32Bit = true;
 
 nixpkgs.config = {
   allowUnfree = true;
@@ -60,7 +60,7 @@ unstable.youtube-dl
   file
   filelight
   firefox
-  firefox-devedition-bin
+#  firefox-devedition-bin
   fzf
   gcc
   gimp
