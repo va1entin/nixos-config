@@ -1,9 +1,6 @@
 {
-
-nix = {
-  useSandbox = true;
-  autoOptimiseStore = true;
-
-};
-
+  nix = {
+    useSandbox = true;
+    autoOptimiseStore = true;
+  };
 }

@@ -1,28 +1,22 @@
 {
-networking = {
+  networking = {
+    nameservers = [ "192.168.1.1" ];
+    networkmanager.enable = true;
+    hostName = "val";
 
-nameservers = [ "192.168.1.1" ];
+    # Open ports in the firewall.
 
-networkmanager.enable = true;
+    firewall.allowedTCPPortRanges = [
+    # kdeconnect
+    #  { from = 1714; to = 1764; }
+    ];
 
-hostName = "val";
+    firewall.allowedUDPPortRanges = [
+    # kdeconnect
+    #  { from = 1714; to = 1764; }
+    ];
 
-
-# Open ports in the firewall.
-
-firewall.allowedTCPPortRanges = [
-# kdeconnect
-#  { from = 1714; to = 1764; }
-];
-
-firewall.allowedUDPPortRanges = [
-# kdeconnect
-#  { from = 1714; to = 1764; }
-];
-
-
-# Or disable the firewall altogether.
-# networking.firewall.enable = false;
-
-};
+    # Or disable the firewall altogether.
+    # networking.firewall.enable = false;
+  };
 }
