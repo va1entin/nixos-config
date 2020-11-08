@@ -113,6 +113,9 @@ in {
     # anydesk
     teamviewer
 
+    # Ruby
+    rubyPackages.rouge
+
     # Security
     gnupg
     keepassx-community
