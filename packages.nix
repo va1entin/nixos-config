@@ -66,6 +66,7 @@ in {
     # Media
     abcde
     audacity
+    brasero
     cdparanoia
     devede
     ffmpeg
@@ -111,7 +112,7 @@ in {
     ]))
 
     # RSAT
-    ansible_2_9
+    ansible
     # anydesk
     teamviewer
 
