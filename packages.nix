@@ -15,12 +15,12 @@ in {
 
     # Broken
     # autokey
+    # tor-browser-bundle-bin
 
     # Browser
     chromium
     firefox
     # firefox-devedition-bin
-    tor-browser-bundle-bin
 
     # Cloud
     awscli
@@ -67,8 +67,10 @@ in {
     abcde
     audacity
     cdparanoia
+    devede
     ffmpeg
     gimp
+    handbrake
     inkscape
     # mpv
     pavucontrol
