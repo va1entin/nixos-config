@@ -1,7 +1,17 @@
 {
-  # Required for teamviewer client
-  services.teamviewer.enable = true;
+  services = {
+    syncthing = {
+      enable = true;
+      user = "val";
+      dataDir = "/home/val/Sync";
+      configDir = "/home/val/.config/syncthing";
+    };
 
-  services.openssh.enable = true;
-  #services.printing.enable = true;
+    # Required for teamviewer client
+    teamviewer.enable = true;
+
+    openssh.enable = true;
+
+    #printing.enable = true;
+  };
 }
