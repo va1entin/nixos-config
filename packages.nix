@@ -29,7 +29,6 @@ in {
     kops
     kubectl
     minikube
-    nextcloud-client
 
     # Communication
     discord
