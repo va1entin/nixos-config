@@ -2,11 +2,14 @@
 let
   unstable = import <nixpkgs-unstable> {config = config.nixpkgs.config;};
 in {
-  programs.adb.enable = true;
-  programs.gnome-terminal.enable = true;
+  programs = {
+    adb.enable = true;
 
-  # Required for pulseeffects
-  programs.dconf.enable = true;
+    gnome-terminal.enable = true;
+
+    # Required for pulseeffects
+    dconf.enable = true;
+  };
 
   environment.systemPackages = with pkgs; [
 
@@ -165,6 +168,7 @@ in {
     vim
     wget
     which
+    yamllint
     zip
 
     # Cuda
