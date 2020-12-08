@@ -17,6 +17,12 @@
         # Required for Wayland with GDM when using nvidia proprietary drivers
         # nvidiaWayland = true;
       };
+
+      lightdm = {
+        # enable = true;
+        # background = "/mnt/sddm-theme/blur1.jpg";
+        # autoNumlock = true;
+      };
     };
   };
 }

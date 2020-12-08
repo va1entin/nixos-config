@@ -8,7 +8,6 @@
       ./hardware-configuration.nix
       /home/val/git/nixos-config/boot.nix
       /home/val/git/nixos-config/cron.nix
-#      /home/val/git/nixos-config/display-manager.nix
 #      /home/val/git/nixos-config/fs.nix
       /home/val/git/nixos-config/hardware.nix
       /home/val/git/nixos-config/i18n.nix
