@@ -14,7 +14,7 @@
      alias abcde="abcde -c ~/git/configs/abcde.conf"
      alias docker="sudo docker"
      alias rebuildnow="sudo nix-channel --update && sudo nixos-rebuild switch --upgrade"
-     alias ydl='youtube-dl -x --audio-format "opus" --audio-quality 0 -o "~/music/%(title)s.%(ext)s"'
+     alias ydl='youtube-dl -x --audio-format "best" --audio-quality 0 -o "./%(title)s.%(ext)s"'
      alias rgrep="grep -r"
      alias adpdf="asciidoctor -r asciidoctor-pdf -b pdf -a pdf-style='theme.yml'"
      alias torb="tor-browser &"
