@@ -14,6 +14,8 @@
       gdm = {
         enable = true;
         wayland = false;
+        # Required for Wayland with GDM when using nvidia proprietary drivers
+        # nvidiaWayland = true;
       };
     };
   };
