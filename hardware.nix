@@ -1,4 +1,7 @@
 {
-  hardware.pulseaudio.enable = true;
-  # hardware.opengl.driSupport32Bit = true;
+  hardware = {
+    pulseaudio.enable = true;
+
+    # opengl.driSupport32Bit = true;
+  };
 }
