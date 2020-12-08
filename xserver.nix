@@ -4,9 +4,17 @@
     enable = true;
     layout = "de";
     videoDrivers = [ "nvidia" ];
-  #  desktopManager.plasma5.enable = true;
-    desktopManager.gnome3.enable = true;
-    displayManager.gdm.enable = true;
-    displayManager.gdm.wayland = false;
+
+    desktopManager = {
+      gnome3.enable = true;
+      # plasma5.enable = true;
+    };
+
+    displayManager = {
+      gdm = {
+        enable = true;
+        wayland = false;
+      };
+    };
   };
 }
