@@ -146,6 +146,7 @@ in {
     iperf
     jpegoptim
     jq
+    libwebp
     lm_sensors
     lsof
     man
