@@ -102,6 +102,7 @@ in {
       numpy
       opencv4
       pandas
+      pycodestyle
       pydot
       pynacl
       pytest
