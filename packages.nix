@@ -18,11 +18,11 @@ in {
 
     # Broken
     # autokey
-    # tor-browser-bundle-bin
 
     # Browser
     chromium
     firefox
+    tor-browser-bundle-bin
     # firefox-devedition-bin
 
     # Cloud
@@ -159,6 +159,7 @@ in {
     pciutils
     pdftk
     pandoc
+    pwgen
     rclone
     rsync
     traceroute
