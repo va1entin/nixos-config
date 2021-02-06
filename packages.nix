@@ -52,6 +52,7 @@ in {
     gparted
     libreoffice-fresh
     p7zip
+    remmina
     zim
 
     # Dev
