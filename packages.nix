@@ -113,6 +113,7 @@ in {
       theano
       toolz
       websockets
+      caldav
     ]))
 
     # RSAT
@@ -133,6 +134,7 @@ in {
     ncurses
     oh-my-zsh
     screen
+    sshpass
     tmux
     zsh
 
