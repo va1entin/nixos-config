@@ -63,6 +63,7 @@ in {
     gcc
     gnumake
     jekyll
+    vscode
 
     # Gnome
     gnome3.gnome-tweaks
