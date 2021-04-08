@@ -36,6 +36,7 @@ in {
     # Communication
     discord
     hexchat
+    # mumble
     signal-desktop
     teamspeak_client
     thunderbird
