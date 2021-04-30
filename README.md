@@ -1,3 +1,5 @@
+**This repo is not actively maintained anymore**
+
 # nixos-config
 
 This repo contains my NixOS configuration. I've split it up into different files to keep it organized and easily readable.
