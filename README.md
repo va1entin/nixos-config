@@ -1,4 +1,4 @@
-**As of 2021 this repo is not actively maintained anymore! I have switched from NixOS to Arch Linux, specifically [EndeavourOS](https://endeavouros.com/). There is a new config repo for my setup [here](https://github.com/va1entin/arch-config)**
+**As of 2021 this repo is not actively maintained anymore! I have switched from NixOS to Arch Linux, specifically [EndeavourOS](https://endeavouros.com/). There is a new config repo for my setup [here](https://github.com/va1entin/arch-config).**
 
 # nixos-config
 
